@@ -1,0 +1,145 @@
+@use "./variables/commonVariables";
+
+$buttonWidth: 100px;
+$buttonHeight: 50px;
+$windowHeight: 141px;
+
+.destinationBox {
+  overflow: visible;
+  transition: all 0.5s;
+}
+
+.ecoMioButton {
+  all: unset;
+  width: $buttonWidth;
+  height: $buttonHeight;
+  position: absolute;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: commonVariables.$clr-bg-btb;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.ecoMioButtonLogo {
+  width: 100%;
+  background-image: url(https://ecomio.com/wp-content/uploads/eco.mio_RGB_white_small.png);
+}
+
+.destinationShadowGoodScore {
+  box-shadow: commonVariables.$clr-bg-rewardgood 0px 0px 16px;
+}
+
+.windowShadowGoodScore {
+  box-shadow: 1px 1px 4px commonVariables.$clr-bg-rewardgood,
+           -1px 1px 4px commonVariables.$clr-bg-rewardgood,
+            0px 1px 4px commonVariables.$clr-bg-rewardgood;
+}
+
+.destinationShadowOneLeafScore {
+  box-shadow: commonVariables.$clr-bg-rewardoneleaf 0px 0px 16px;
+}
+
+.windowShadowOneLeafScore {
+  box-shadow: 1px 1px 4px commonVariables.$clr-bg-rewardoneleaf,
+           -1px 1px 4px commonVariables.$clr-bg-rewardoneleaf,
+            0px 1px 4px commonVariables.$clr-bg-rewardoneleaf;
+}
+
+.destinationShadowNoLeafScore {
+  box-shadow: commonVariables.$clr-bg-rewardnoleaf 0px 0px 16px;
+}
+
+.windowShadowNoLeafScore {
+  box-shadow: 1px 1px 4px commonVariables.$clr-bg-rewardnoleaf,
+           -1px 1px 4px commonVariables.$clr-bg-rewardnoleaf,
+            0px 1px 4px commonVariables.$clr-bg-rewardnoleaf;
+}
+
+.destinationShadowBadScore {
+  box-shadow: commonVariables.$clr-bg-rewardbad 0px 0px 16px;
+}
+
+.windowShadowBadScore {
+  box-shadow: 1px 1px 4px commonVariables.$clr-bg-rewardbad,
+           -1px 1px 4px commonVariables.$clr-bg-rewardbad,
+            0px 1px 4px commonVariables.$clr-bg-rewardbad;
+}
+
+.ecoMioWindow {
+  position: absolute;
+  width: 259px;
+  height: $windowHeight;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: commonVariables.$clr-bg-btb;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  padding: 8px;
+  padding-top: 30px;
+}
+
+.ecoMioWindowHidden {
+  width: $buttonWidth;
+  height: $buttonHeight;
+}
+
+.sustainabilityScoreProgressBarWrapper {
+  position: relative;
+  height: 35px;
+  width: 100%;
+  background-color: commonVariables.$clr-bg-btb;
+  border: 2px solid rgb(0, 0, 0, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sustainabilityScoreProgressBar {
+  position: absolute;
+  left: 0;
+  width: var(--progress-value);
+  height: 100%;
+  z-index: 2;
+  transition: all 0.5s;
+}
+
+.sustainabilityScoreProgressBarGood {
+  background-color: commonVariables.$clr-bg-rewardgood;
+}
+
+.sustainabilityScoreProgressBarOneLeaf {
+  background-color: commonVariables.$clr-bg-rewardoneleaf;
+}
+
+.sustainabilityScoreProgressBarNoLeaf {
+  background-color: commonVariables.$clr-bg-rewardnoleaf;
+}
+
+.sustainabilityScoreProgressBarBad {
+  background-color: commonVariables.$clr-bg-rewardbad;
+}
+
+.progressBarValueLabel {
+  position: relative;
+  z-index: 3;
+  color: commonVariables.$clr-text-default;
+}
+
+.sustainabilityScoreTitle {
+  font-weight: bold;
+  color: commonVariables.$clr-text-default;
+  white-space: nowrap;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 18.72px;
+  font-family: unset;
+}
