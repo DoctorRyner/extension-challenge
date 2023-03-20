@@ -1,6 +1,6 @@
 # eco.mio Browser Extension
 
-## Rainer Rainhardt's note on running and testing the project
+## Rainer Rainkhardt's note on running and testing the project
 
 ### Running the Python API
 
